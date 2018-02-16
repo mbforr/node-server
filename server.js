@@ -70,6 +70,15 @@ app.get('/about', (req, res) => {
   })
 });
 
+
+app.get('/hello', (req, res) => {
+  res.render('hello.hbs', {
+    pagetitle: 'Hey!!!!',
+    p: 'Nothing here yet :)',
+    name: 'Matt'
+  })
+});
+
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
